@@ -9,6 +9,11 @@
 <meta property="og:description" content="Downtown Fredericksburg's premier tattoo and piercing shop since 2007. Book a consultation today.">
 <meta property="og:image" content="https://kalnyesgrowth.github.io/sorry-mom-tattoo/poster.jpg">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://kalnyesgrowth.github.io/sorry-mom-tattoo/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sorry Mom Tattoo | Fredericksburg, VA">
+<meta name="twitter:description" content="Downtown Fredericksburg's premier tattoo and piercing shop since 2007. Book a consultation today.">
+<meta name="twitter:image" content="https://kalnyesgrowth.github.io/sorry-mom-tattoo/poster.jpg">
 <link rel="canonical" href="https://kalnyesgrowth.github.io/sorry-mom-tattoo/">
 <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
 <script type="application/ld+json">
@@ -373,6 +378,7 @@ footer {
   align-items: center; justify-content: center;
 }
 .back-to-top.visible { opacity: 1; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 
 @media (min-width: 769px) {
   .nav-phone { display: block; }
@@ -397,6 +403,11 @@ footer {
   .review-card { min-width: 280px; }
   .section { padding: var(--space-lg) 0; }
   .back-to-top { bottom: 90px; }
+}
+@media (max-width: 1024px) and (min-width: 769px) {
+  .services-grid { grid-template-columns: repeat(2, 1fr); }
+  .safety-grid { grid-template-columns: repeat(2, 1fr); }
+  .safety-card:last-child { grid-column: 1 / -1; max-width: 50%; margin: 0 auto; }
 }
 </style>
 </head>
@@ -429,7 +440,8 @@ footer {
   <div class="hero-video-wrap"><canvas id="heroCanvas"></canvas></div>
   <div class="hero-overlay"></div>
   <div class="hero-content">
-    <img src="logo.png" alt="Sorry Mom Tattoo" class="hero-logo" width="220" height="220">
+    <h1 class="sr-only">Sorry Mom Tattoo - Fredericksburg, VA Tattoo and Piercing Shop</h1>
+    <img src="logo.png" alt="Sorry Mom Tattoo" class="hero-logo" width="220" height="220" fetchpriority="high">
     <p class="hero-tagline">Fredericksburg's Tattoo & Piercing Destination Since 2007</p>
     <a href="https://sorrymomtattoo.com/contact/" target="_blank" class="ghost-btn">Book a Consultation</a>
   </div>
@@ -561,22 +573,22 @@ footer {
       <h2>Gallery</h2>
     </div>
     <div class="gallery-grid">
-      <div class="gallery-item reveal" onclick="openLightbox(0)"><img src="img/gallery-1.jpg" alt="Tattoo artist drawing detailed stencil" loading="lazy"></div>
-      <div class="gallery-item reveal" onclick="openLightbox(1)"><img src="img/gallery-2.jpg" alt="Color tattoo sleeve work in progress" loading="lazy"></div>
-      <div class="gallery-item reveal" onclick="openLightbox(2)"><img src="img/gallery-3.jpg" alt="Chest piece tattoo with stencil" loading="lazy"></div>
-      <div class="gallery-item reveal" onclick="openLightbox(3)"><img src="img/gallery-4.jpg" alt="Close up tattooing with black gloves" loading="lazy"></div>
-      <div class="gallery-item reveal" onclick="openLightbox(4)"><img src="img/gallery-5.jpg" alt="Tattoo machine near wrist work" loading="lazy"></div>
-      <div class="gallery-item reveal" onclick="openLightbox(5)"><img src="img/gallery-6.jpg" alt="Detailed tattoo line work" loading="lazy"></div>
+      <div class="gallery-item reveal" tabindex="0" role="button" aria-label="View tattoo gallery image 1" onclick="openLightbox(0)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLightbox(0)}"><img src="img/gallery-1.jpg" alt="Tattoo artist drawing detailed stencil" loading="lazy"></div>
+      <div class="gallery-item reveal" tabindex="0" role="button" aria-label="View tattoo gallery image 2" onclick="openLightbox(1)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLightbox(1)}"><img src="img/gallery-2.jpg" alt="Color tattoo sleeve work in progress" loading="lazy"></div>
+      <div class="gallery-item reveal" tabindex="0" role="button" aria-label="View tattoo gallery image 3" onclick="openLightbox(2)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLightbox(2)}"><img src="img/gallery-3.jpg" alt="Chest piece tattoo with stencil" loading="lazy"></div>
+      <div class="gallery-item reveal" tabindex="0" role="button" aria-label="View tattoo gallery image 4" onclick="openLightbox(3)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLightbox(3)}"><img src="img/gallery-4.jpg" alt="Close up tattooing with black gloves" loading="lazy"></div>
+      <div class="gallery-item reveal" tabindex="0" role="button" aria-label="View tattoo gallery image 5" onclick="openLightbox(4)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLightbox(4)}"><img src="img/gallery-5.jpg" alt="Tattoo machine near wrist work" loading="lazy"></div>
+      <div class="gallery-item reveal" tabindex="0" role="button" aria-label="View tattoo gallery image 6" onclick="openLightbox(5)" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLightbox(5)}"><img src="img/gallery-6.jpg" alt="Detailed tattoo line work" loading="lazy"></div>
     </div>
     <p style="color:var(--ash);margin-top:var(--space-md);font-size:var(--text-sm);text-align:center;">Follow <a href="https://www.instagram.com/smtattoo/" target="_blank" rel="noopener">@smtattoo</a> on Instagram for our latest work.</p>
   </div>
 </section>
 
-<div class="lightbox" id="lightbox">
-  <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
-  <button class="lightbox-nav lightbox-prev" onclick="prevLightbox()">&#8249;</button>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Tattoo gallery viewer">
+  <button class="lightbox-close" id="lightboxClose" onclick="closeLightbox()" aria-label="Close gallery">&times;</button>
+  <button class="lightbox-nav lightbox-prev" onclick="prevLightbox()" aria-label="Previous image">&#8249;</button>
   <img id="lightboxImg" src="" alt="Gallery image">
-  <button class="lightbox-nav lightbox-next" onclick="nextLightbox()">&#8250;</button>
+  <button class="lightbox-nav lightbox-next" onclick="nextLightbox()" aria-label="Next image">&#8250;</button>
 </div>
 
 <section class="section" id="reviews">
@@ -755,7 +767,7 @@ footer {
 </div>
 
 <script>
-(function(){var c=document.getElementById('heroCanvas');if(!c)return;var x=c.getContext('2d'),v=document.createElement('video');v.muted=true;v.loop=true;v.playsInline=true;v.setAttribute('playsinline','');v.setAttribute('webkit-playsinline','');v.preload='auto';v.src=window.innerWidth<768?'hero-mobile.mp4':'hero.mp4';function r(){c.width=c.offsetWidth;c.height=c.offsetHeight}r();window.addEventListener('resize',r);function d(){if(v.readyState>=2)x.drawImage(v,0,0,c.width,c.height);requestAnimationFrame(d)}v.addEventListener('canplay',function(){v.play().catch(function(){});d()});v.load();setTimeout(function(){v.play().catch(function(){})},500)})();
+(function(){var c=document.getElementById('heroCanvas');if(!c)return;var x=c.getContext('2d'),v=document.createElement('video');v.muted=true;v.loop=true;v.playsInline=true;v.setAttribute('playsinline','');v.setAttribute('webkit-playsinline','');v.preload='auto';var mq=window.matchMedia('(max-width:767px)');function setVidSrc(){v.src=mq.matches?'hero-mobile.mp4':'hero.mp4';v.load()}setVidSrc();mq.addEventListener('change',setVidSrc);function r(){c.width=c.offsetWidth;c.height=c.offsetHeight}r();window.addEventListener('resize',r);var raf=0;function d(){if(v.readyState>=2)x.drawImage(v,0,0,c.width,c.height);raf=requestAnimationFrame(d)}document.addEventListener('visibilitychange',function(){if(document.hidden){v.pause();cancelAnimationFrame(raf)}else{v.play().catch(function(){});d()}});v.addEventListener('canplay',function(){v.play().catch(function(){});d()});v.load();setTimeout(function(){v.play().catch(function(){})},500)})();
 
 (function(){var n=document.getElementById('mainNav'),h=document.getElementById('hero');window.addEventListener('scroll',function(){n.classList.toggle('scrolled',window.scrollY>h.offsetHeight-80)})})();
 
@@ -766,11 +778,12 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener
 
 (function(){var r=document.querySelectorAll('.reveal');var o=new IntersectionObserver(function(e){e.forEach(function(en){if(en.isIntersecting){en.target.classList.add('visible');o.unobserve(en.target)}})},{threshold:0.1});r.forEach(function(el){o.observe(el)})})();
 
-var gi=['img/gallery-1.jpg','img/gallery-2.jpg','img/gallery-3.jpg','img/gallery-4.jpg','img/gallery-5.jpg','img/gallery-6.jpg'],cl=0;
-function openLightbox(i){cl=i;document.getElementById('lightboxImg').src=gi[i];document.getElementById('lightbox').classList.add('active');document.body.style.overflow='hidden'}
-function closeLightbox(){document.getElementById('lightbox').classList.remove('active');document.body.style.overflow=''}
-function nextLightbox(){cl=(cl+1)%gi.length;document.getElementById('lightboxImg').src=gi[cl]}
-function prevLightbox(){cl=(cl-1+gi.length)%gi.length;document.getElementById('lightboxImg').src=gi[cl]}
+var gi=['img/gallery-1.jpg','img/gallery-2.jpg','img/gallery-3.jpg','img/gallery-4.jpg','img/gallery-5.jpg','img/gallery-6.jpg'],ga=document.querySelectorAll('.gallery-item img'),cl=0;
+function syncAlt(){var a=ga[cl]?ga[cl].alt:'Gallery image';document.getElementById('lightboxImg').alt=a}
+function openLightbox(i){cl=i;document.getElementById('lightboxImg').src=gi[i];syncAlt();document.getElementById('lightbox').classList.add('active');document.body.style.overflow='hidden';document.getElementById('lightboxClose').focus()}
+function closeLightbox(){document.getElementById('lightbox').classList.remove('active');document.body.style.overflow='';var t=document.querySelectorAll('.gallery-item')[cl];if(t)t.focus()}
+function nextLightbox(){cl=(cl+1)%gi.length;document.getElementById('lightboxImg').src=gi[cl];syncAlt()}
+function prevLightbox(){cl=(cl-1+gi.length)%gi.length;document.getElementById('lightboxImg').src=gi[cl];syncAlt()}
 document.addEventListener('keydown',function(e){if(!document.getElementById('lightbox').classList.contains('active'))return;if(e.key==='Escape')closeLightbox();if(e.key==='ArrowRight')nextLightbox();if(e.key==='ArrowLeft')prevLightbox()});
 
 (function(){var d=new Date().getDay();document.querySelectorAll('#hoursList li').forEach(function(li){if(parseInt(li.getAttribute('data-day'))===d){li.classList.add('today');li.querySelector('.day').textContent+=' (Today)'}})})();
